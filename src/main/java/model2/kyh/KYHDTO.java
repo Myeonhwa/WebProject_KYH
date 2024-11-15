@@ -10,8 +10,8 @@ public class KYHDTO {
 	private String address;
 	private String phone;
 	private String cate;
-	private java.sql.Date join_date;
-	
+	private java.sql.Date joindate;
+	private String name;
 	
 //	게터세터
 	public String getIdx() {
@@ -62,11 +62,17 @@ public class KYHDTO {
 	public void setCate(String cate) {
 		this.cate = cate;
 	}
-	public java.sql.Date getJoin_date() {
-		return join_date;
+	public java.sql.Date getJoindate() {
+		return joindate;
 	}
-	public void setJoin_date(java.sql.Date join_date) {
-		this.join_date = join_date;
+	public void setJoindate(java.sql.Date join_date) {
+		this.joindate = join_date;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	

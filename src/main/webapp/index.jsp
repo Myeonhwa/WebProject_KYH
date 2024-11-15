@@ -60,7 +60,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="./contact.jsp">Contact</a></li>
-                                <li><a href="./login.jsp">Login</a></li>
+                                <li><a href="login/Login.jsp">Login</a></li>
                             </ul>
                         </nav>
                         <div class="header__nav__social">
