@@ -59,7 +59,7 @@ public class JSFunction {
                           + "    alert('" + msg + "');"
                           + "    location.href='" + url + "';"
                           + "</script>";
-            writer.println(script);
+            writer.print(script);
         }
         catch (Exception e) {}
     }
@@ -73,7 +73,7 @@ public class JSFunction {
                           + "    alert('" + msg + "');"
                           + "    history.back();"
                           + "</script>";
-            writer.println(script);
+            writer.print(script);
         }
         catch (Exception e) {}
     }

@@ -18,7 +18,9 @@
 	MemberDTO memberDTO = dao.getMemberDTO(userId, userPwd);
 	
 	dao.close();
-	
+	/***********************/
+	/* 여기서 로그인 실패가 뜨는데 모르겠음*/
+	/***********************/
 	if (memberDTO.getId() != null) {
 		
 		session.setAttribute("UserId", memberDTO.getId());

@@ -84,7 +84,7 @@ public class KYHDAO extends DBConnPool {
 			result = psmt.executeUpdate();
 		}
 		catch (Exception e) {
-			System.out.println("게시물 등록중 에러가 발생했습니다.");
+			System.out.println("게시물 등록 중 에러가 발생했습니다.");
 			e.printStackTrace();
 		}
 		return result;
