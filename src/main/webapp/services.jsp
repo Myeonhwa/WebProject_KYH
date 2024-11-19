@@ -93,74 +93,7 @@
     </div>
     <!-- Breadcrumb End -->
 
-    <!-- Services Section Begin -->
-    <section class="services-page spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="services__item">
-                        <div class="services__item__icon">
-                            <img src="img/icons/si-2.png" alt="">
-                        </div>
-                        <h4>Scriptwriting and editing</h4>
-                        <p>Whether youâre halfway through the editing process, or you havenât even started, our post
-                            production services can put the finishing touches.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="services__item">
-                        <div class="services__item__icon">
-                            <img src="img/icons/si-1.png" alt="">
-                        </div>
-                        <h4>Motion graphics</h4>
-                        <p>Whether youâre halfway through the editing process, or you havenât even started, our post
-                            production services can put the finishing touches.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="services__item">
-                        <div class="services__item__icon">
-                            <img src="img/icons/si-2.png" alt="">
-                        </div>
-                        <h4>Scriptwriting and editing</h4>
-                        <p>Whether youâre halfway through the editing process, or you havenât even started, our post
-                            production services can put the finishing touches.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="services__item">
-                        <div class="services__item__icon">
-                            <img src="img/icons/si-3.png" alt="">
-                        </div>
-                        <h4>Video distribution</h4>
-                        <p>Whether youâre halfway through the editing process, or you havenât even started, our post
-                            production services can put the finishing touches.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="services__item">
-                        <div class="services__item__icon">
-                            <img src="img/icons/si-4.png" alt="">
-                        </div>
-                        <h4>Video hosting</h4>
-                        <p>Whether youâre halfway through the editing process, or you havenât even started, our post
-                            production services can put the finishing touches.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="services__item">
-                        <div class="services__item__icon">
-                            <img src="img/icons/si-4.png" alt="">
-                        </div>
-                        <h4>Video hosting</h4>
-                        <p>Whether youâre halfway through the editing process, or you havenât even started, our post
-                            production services can put the finishing touches.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Services Section End -->
+    
 
     <!-- Call To Action Section Begin -->
     <section class="callto sp__callto">
@@ -172,7 +105,7 @@
                             <h2>CREATE AWESOME VIDEOS WITH WIDEOâS POWERFUL FEATURES</h2>
                             <p>Wideo combines all the features you need to easily create professional videos and
                                 presentations</p>
-                            <a href="#">Start your stories</a>
+                            <a href="./board/Write.jsp">Start your stories</a>
                         </div>
                     </div>
                 </div>

@@ -50,7 +50,8 @@
                                 <li class="active"><a href="./index.jsp">Home</a></li>
                                 <li><a href="./about.jsp">About</a></li>
                                 <li><a href="./portfolio.jsp">Portfolio</a></li>
-                                <li><a href="./services.jsp">Services</a></li>
+                                <li><a href="./board/List.jsp">게시물</a></li>
+                                <li><a href="./services.jsp">작성하기</a></li>
                                 <li><a href="#">Pages</a>
                                     <ul class="dropdown">
                                         <li><a href="./about.jsp">About</a></li>

@@ -14,13 +14,13 @@
     <title>SB Admin 2 - Register</title>
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -32,7 +32,9 @@
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
                 <div class="row">
-                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-5 d-none d-lg-block bg-register-image">
+                    <img src="../img/login/bg.jpg" alt="" width="450" height="500"/>
+                    </div>                    
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
@@ -77,7 +79,7 @@
                                     <input type="email" class="form-control form-control-user" id="exampleInputAddress"
                                         placeholder="주소">
                                 </div>
-                                <a href="login.jsp" class="btn btn-primary btn-user btn-block">
+                                <a href="Login.jsp" class="btn btn-primary btn-user btn-block">
                                     회원가입
                                 </a>
                                 
@@ -87,7 +89,7 @@
                                 <a class="small" href="forgot-password.jsp">비밀번호 찾기</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="login.jsp">이미 계정이 있다면? 로그인 하러가기</a>
+                                <a class="small" href="Login.jsp">이미 계정이 있다면? 로그인 하러가기</a>
                             </div>
                         </div>
                     </div>

@@ -33,7 +33,28 @@
   	<session-timeout>60</session-timeout>
   </session-config>
   
-  
+  <!-- 글 리스트 매핑 -->
+  <servlet>
+  	<servlet-name>KYHBoardList</servlet-name>
+  	<servlet-class>model2.kyh.ListController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>KYHBoardList</servlet-name>
+  	<url-pattern>/kyh/list.do</url-pattern>
+  </servlet-mapping>
+  <!-- 글작성 매핑 -->
+  <servlet>
+  	<servlet-name>KYHBoardWrite</servlet-name>
+  	<servlet-class>model2.kyh.WriteController</servlet-class>
+  	<multipart-config>
+  		<max-file-size>10485760</max-file-size>
+  		<max-request-size>104857600</max-request-size>
+  	</multipart-config>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>KYHBoardWrite</servlet-name>
+  	<url-pattern>/kyh/write.do</url-pattern>
+  </servlet-mapping>
   
   
   

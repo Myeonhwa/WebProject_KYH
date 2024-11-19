@@ -1,3 +1,5 @@
+<%@page import="membership.MemberDTO"%>
+<%@page import="membership.MemberDAO"%>
 <%@page import="model2.kyh.KYHDTO"%>
 <%@page import="model2.kyh.KYHDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -12,18 +14,18 @@
 	String oracleId = application.getInitParameter("OracleId");
 	String oraclePwd = application.getInitParameter("OraclePwd");
 	
-	KYHDAO dao = new KYHDAO(oracleDriver, oracleURL, oracleId, oraclePwd);
-	KYHDTO kyhDTO = dao.getKYHDTO(userId, userPwd);
+	MemberDAO dao = new MemberDAO(oracleDriver, oracleURL, oracleId, oraclePwd);
+	MemberDTO memberDTO = dao.getMemberDTO(userId, userPwd);
 	
 	dao.close();
 	
-	if (kyhDTO.getId() != null) {
+	if (memberDTO.getId() != null) {
 		
-		session.setAttribute("UserId", kyhDTO.getId());
-		session.setAttribute("UserName", kyhDTO.getName());
+		session.setAttribute("UserId", memberDTO.getId());
+		session.setAttribute("UserName", memberDTO.getName());
 		
 		response.sendRedirect("index.jsp");
-		request.setAttribute("LoginErrMsg", "로그인성공")
+		
 	}
 	else {
 		request.setAttribute("LoginErrMsg", "로그인 실패");

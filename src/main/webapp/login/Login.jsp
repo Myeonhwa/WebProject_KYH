@@ -85,9 +85,8 @@
                                                 <label class="custom-control-label" for="customCheck">자동로그인</label>
                                             </div>
                                         </div>
-                                        <a href="../index.jsp" type="submit" class="btn btn-primary btn-user btn-block">
-                                            로그인
-                                        </a>                                                                                
+                                        <input type="submit" value="로그인" class="btn btn-primary btn-user btn-block"/>
+                                                                                                                       
                                     </form>
                                     <%
 									} else {

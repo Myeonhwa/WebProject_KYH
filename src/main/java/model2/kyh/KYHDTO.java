@@ -1,19 +1,18 @@
 package model2.kyh;
 
 public class KYHDTO {
-//	멤버변수 선언
+//	멤버 변수 선언
 	private String idx;
 	private String id;
-	private String password;
-	private String sex;
-	private String email;
-	private String address;
-	private String phone;
-	private String cate;
-	private java.sql.Date joindate;
+	private String title;
+	private String content;
+	private java.sql.Date postdate;
+	private String ofile;
+	private String sfile;
+	private int downcount;
+	private int visitcount;
 	private String name;
 	
-//	게터세터
 	public String getIdx() {
 		return idx;
 	}
@@ -26,47 +25,47 @@ public class KYHDTO {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getPassword() {
-		return password;
+	public String getTitle() {
+		return title;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setTitle(String title) {
+		this.title = title;
 	}
-	public String getSex() {
-		return sex;
+	public String getContent() {
+		return content;
 	}
-	public void setSex(String sex) {
-		this.sex = sex;
+	public void setContent(String content) {
+		this.content = content;
 	}
-	public String getEmail() {
-		return email;
+	public java.sql.Date getPostdate() {
+		return postdate;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setPostdate(java.sql.Date postdate) {
+		this.postdate = postdate;
 	}
-	public String getAddress() {
-		return address;
+	public String getOfile() {
+		return ofile;
 	}
-	public void setAddress(String address) {
-		this.address = address;
+	public void setOfile(String ofile) {
+		this.ofile = ofile;
 	}
-	public String getPhone() {
-		return phone;
+	public String getSfile() {
+		return sfile;
 	}
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setSfile(String sfile) {
+		this.sfile = sfile;
 	}
-	public String getCate() {
-		return cate;
+	public int getDowncount() {
+		return downcount;
 	}
-	public void setCate(String cate) {
-		this.cate = cate;
+	public void setDowncount(int downcount) {
+		this.downcount = downcount;
 	}
-	public java.sql.Date getJoindate() {
-		return joindate;
+	public int getVisitcount() {
+		return visitcount;
 	}
-	public void setJoindate(java.sql.Date join_date) {
-		this.joindate = join_date;
+	public void setVisitcount(int visitcount) {
+		this.visitcount = visitcount;
 	}
 	public String getName() {
 		return name;
