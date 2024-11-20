@@ -10,10 +10,7 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
-  <context-param>
-		<param-name>INIT_PARAM</param-name>
-		<param-value>web.xml에 저장한 초기화 매개변수</param-value>
-	</context-param>
+  
   <!-- JDBC 정보 -->
   <context-param>
   	<param-name>OracleDriver</param-name>
@@ -25,12 +22,13 @@
   </context-param>
   <context-param>
   	<param-name>OracleId</param-name>
-  	<param-value>education</param-value>
+  	<param-value>webproject_db</param-value>
   </context-param>
   <context-param>
   	<param-name>OraclePwd</param-name>
   	<param-value>1234</param-value>
   </context-param>
+  
   <!-- 세션 유지시간 설정 : 분 단위 -->
   <session-config>
   	<session-timeout>60</session-timeout>

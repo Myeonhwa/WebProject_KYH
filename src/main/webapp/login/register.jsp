@@ -40,48 +40,47 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">회원가입 하기</h1>
                             </div>
-                            <form class="user">
+                            <form class="user" action="RegisterProcess.jsp" method="post"
+                                    	name="registerFrm" onsubmit="return validateForm(this);">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="exampleName"
+                                        <input type="text" class="form-control form-control-user" name="user_id"
                                             placeholder="아이디">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleSex"
-                                            placeholder="성별">
+                                        <input type="text" class="form-control form-control-user" id="user_sex"
+                                            placeholder="성별 (선택사항)">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="password" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="비밀번호">
+                                            name="user_pw" placeholder="비밀번호">
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="password" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="비밀번호 확인">
+                                            name="user_pw2" placeholder="비밀번호 확인">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="examplePhone"
-                                            placeholder="핸드폰 번호">
+                                        <input type="text" class="form-control form-control-user" name="user_ph"
+                                            placeholder="핸드폰 번호 (선택사항)">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleCate"
-                                            placeholder="관심분야">
+                                        <input type="text" class="form-control form-control-user" name="user_ct"
+                                            placeholder="관심분야 (선택사항)">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="이메일">
+                                    <input type="email" class="form-control form-control-user" name="user_em"
+                                        placeholder="이메일 (선택사항)">
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputAddress"
-                                        placeholder="주소">
+                                    <input type="email" class="form-control form-control-user" name="user_ad"
+                                        placeholder="주소 (선택사항)">
                                 </div>
-                                <a href="Login.jsp" class="btn btn-primary btn-user btn-block">
-                                    회원가입
-                                </a>
+                                <input type="submit" value="회원가입" class="btn btn-primary btn-user btn-block"/>
                                 
                             </form>
                             <hr>

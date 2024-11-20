@@ -4,7 +4,10 @@
 <%
 	session.removeAttribute("UserId");
 	session.removeAttribute("UserName");
+	
 %>    
+
+	<a href="../index.jsp">[홈페이지]</a>
     
 <!DOCTYPE html>
 <html>

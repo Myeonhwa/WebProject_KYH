@@ -72,12 +72,12 @@
                                     	name="loginFrm" onsubmit="return validateForm(this);">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
-                                                id="user_id" aria-describedby="emailHelp"
+                                                name="user_id" aria-describedby="emailHelp"
                                                 placeholder="아이디">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                id="user_pw" placeholder="비밀번호">
+                                                name="user_pw" placeholder="비밀번호">
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
@@ -92,6 +92,7 @@
 									} else {
                                     %>
                                     <%= session.getAttribute("UserName") %> 로그인 되었습니다. <br />
+                                    <a href="../index.jsp">[홈페이지]</a>
                                     <a href="Logout.jsp">[로그아웃]</a>
                                     <% 
                                     }
