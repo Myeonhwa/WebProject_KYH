@@ -1,4 +1,4 @@
-package model2.kyh;
+package model2.mvcboard;
 
 import java.io.IOException;
 
@@ -7,8 +7,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import model2.mvcboard.MVCBoardDAO;
-import model2.mvcboard.MVCBoardDTO;
 
 @WebServlet("/mvcboard/view.do")
 public class ViewController extends HttpServlet {
@@ -17,10 +15,10 @@ public class ViewController extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //		게시물 불러오기
-		KYHDAO dao = new KYHDAO();
+		MVCBoardDAO dao = new MVCBoardDAO();
 		String idx = req.getParameter("idx");
 		dao.updateVisitCount(idx);  //조회수 1 증가
-		KYHDTO dto = dao.selectView(idx);
+		MVCBoardDTO dto = dao.selectView(idx);
 		dao.close();
 		
 //		줄바꿈 처리

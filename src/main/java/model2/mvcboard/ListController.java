@@ -1,4 +1,4 @@
-package model2.kyh;
+package model2.mvcboard;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -16,7 +16,7 @@ public class ListController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //		DAO생성
-		KYHDAO dao = new KYHDAO();
+		MVCBoardDAO dao = new MVCBoardDAO();
 //		뷰에 전달한 매개변수 저장용 맵 생성
 		Map<String, Object> map = new HashMap<String, Object>();
 		
@@ -29,7 +29,7 @@ public class ListController extends HttpServlet{
 		}
 		int totalCount = dao.selectCount(map);
 		
-		List<KYHDTO> boardLists = dao.selectList(map);
+		List<MVCBoardDTO> boardLists = dao.selectList(map);
 		dao.close();
 		
 		map.put("totalCount", totalCount);

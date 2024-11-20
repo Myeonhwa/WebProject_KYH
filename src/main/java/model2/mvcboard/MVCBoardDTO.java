@@ -1,6 +1,6 @@
-package model2.kyh;
+package model2.mvcboard;
 
-public class KYHDTO {
+public class MVCBoardDTO {
 //	멤버 변수 선언
 	private String idx;
 	private String id;
@@ -13,6 +13,7 @@ public class KYHDTO {
 	private int visitcount;
 	private String name;
 	
+//	게터/세터
 	public String getIdx() {
 		return idx;
 	}
@@ -74,5 +75,6 @@ public class KYHDTO {
 		this.name = name;
 	}
 	
+
 	
 }
