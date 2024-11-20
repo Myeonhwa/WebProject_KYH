@@ -38,7 +38,7 @@
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">회원가입 하기</h1>
+                                <h1 class="h4 text-gray-900 mb-4">회원정보 수정</h1>
                             </div>
                             <form class="user" action="UpdateInfoProcess.jsp" method="post"
                                     	name="registerFrm" onsubmit="return validateForm(this);">
@@ -49,7 +49,7 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control form-control-user" id="user_sex"
-                                            placeholder="성별 (선택사항)">
+                                            placeholder="성별">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -65,22 +65,22 @@
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="text" class="form-control form-control-user" name="user_ph"
-                                            placeholder="핸드폰 번호 (선택사항)">
+                                            placeholder="핸드폰 번호">
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control form-control-user" name="user_ct"
-                                            placeholder="관심분야 (선택사항)">
+                                            placeholder="관심분야">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control form-control-user" name="user_em"
-                                        placeholder="이메일 (선택사항)">
+                                        placeholder="이메일">
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" name="user_na"
                                         placeholder="닉네임">
                                 </div>
-                                <input type="submit" value="회원가입" class="btn btn-primary btn-user btn-block"/>
+                                <input type="submit" value="수정하기" class="btn btn-primary btn-user btn-block"/>
                                 
                             </form>
                             <hr>
