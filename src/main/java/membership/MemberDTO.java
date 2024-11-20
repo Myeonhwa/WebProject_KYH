@@ -1,5 +1,7 @@
 package membership;
 
+import java.sql.Date;
+
 /*
 DTO(Data Transfer Object)
 : JSP와 Java파일간에 데이터를 전달하기 위한 객체로 자바빈 규약에 의해
@@ -17,7 +19,12 @@ public class MemberDTO {
     private String id;
     private String pass;
     private String name;
-    private String regidate;
+    private Date regidate;
+    private String sex;
+    private String phonenumber;
+    private String category;
+    private String email;
+    
     
     /*
     생성자의 경우 꼭 필요한 경우가 아니라면 생성하지 않는다. 
@@ -25,7 +32,31 @@ public class MemberDTO {
     자동으로 추가되기 때문이다. 
      */
     
-    /*
+    public String getSex() {
+		return sex;
+	}
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+	public String getPhonenumber() {
+		return phonenumber;
+	}
+	public void setPhonenumber(String phonenumber) {
+		this.phonenumber = phonenumber;
+	}
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	/*
     정보은닉된 멤버변수에 접근하기 위해 public으로 정의된 
     getter/setter 메서드를 정의한다. 
      */
@@ -47,10 +78,10 @@ public class MemberDTO {
     public void setName(String name) {
         this.name = name;
     }
-    public String getRegidate() {
+    public Date getRegidate() {
         return regidate;
     }
-    public void setRegidate(String regidate) {
+    public void setRegidate(Date regidate) {
         this.regidate = regidate;
     }
 }

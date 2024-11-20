@@ -77,8 +77,8 @@
                                         placeholder="이메일 (선택사항)">
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" name="user_ad"
-                                        placeholder="주소 (선택사항)">
+                                    <input type="text" class="form-control form-control-user" name="user_na"
+                                        placeholder="닉네임">
                                 </div>
                                 <input type="submit" value="회원가입" class="btn btn-primary btn-user btn-block"/>
                                 
