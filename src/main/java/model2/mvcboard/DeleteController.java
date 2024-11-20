@@ -22,7 +22,7 @@ public class DeleteController extends HttpServlet{
 		HttpSession session = req.getSession();
 		if(session.getAttribute("UserId")==null) {
 			//session영역에 인증에 관련된 속성이 있는지 확인 후 경고창 띄움
-			JSFunction.alertLocation(resp, "로그인 후 이용해주세요.", "../06Session/LoginForm.jsp");
+			JSFunction.alertLocation(resp, "로그인 후 이용해주세요.", "../login/Login.jsp");
 			return;
 		}
 //		게시물 얻어오기: 열람에서 사용한 메서드를 그대로 사용한다.

@@ -1,7 +1,6 @@
 <%@page import="membership.MemberDTO"%>
 <%@page import="membership.MemberDAO"%>
-<%@page import="model2.kyh.KYHDTO"%>
-<%@page import="model2.kyh.KYHDAO"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     

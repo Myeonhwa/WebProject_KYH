@@ -18,10 +18,10 @@ public class WriteController extends HttpServlet{
 //		로그인 확인
 		HttpSession session = req.getSession();
 		if(session.getAttribute("UserId")==null) {
-			JSFunction.alertLocation(resp, "로그인 후 이용해주세요. ", "../06Session/LoginForm.jsp");
+			JSFunction.alertLocation(resp, "로그인 후 이용해주세요. ", "../login/Login.jsp");
 			return;
 		}
-		req.getRequestDispatcher("/14MVCBoard/Write.jsp").forward(req, resp);
+		req.getRequestDispatcher("/board/Write.jsp").forward(req, resp);
 }
 	
 @Override
@@ -29,7 +29,7 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 //	로그인 확인
 	HttpSession session = req.getSession();
 	if(session.getAttribute("UserId")==null) {
-		JSFunction.alertLocation(resp, "로그인 후 이용해주세요. ", "../06Session/LoginForm.jsp");
+		JSFunction.alertLocation(resp, "로그인 후 이용해주세요. ", "../login/Login.jsp");
 		return;
 	}
 

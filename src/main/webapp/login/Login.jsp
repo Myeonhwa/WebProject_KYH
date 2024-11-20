@@ -94,6 +94,7 @@
                                     <%= session.getAttribute("UserName") %> 로그인 되었습니다. <br />
                                     <a href="../index.jsp">[홈페이지]</a>
                                     <a href="Logout.jsp">[로그아웃]</a>
+                                    <a href="Updateinfo.jsp">[회원정보수정]</a>
                                     <% 
                                     }
                                     %>

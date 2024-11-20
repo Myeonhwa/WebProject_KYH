@@ -76,9 +76,59 @@ public class MemberDAO extends JDBConnect {
             
             result = psmt.executeUpdate();
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+    
+    public int updateMember(MemberDTO member) {
+        int result = 0;
+        String query = "UPDATE member SET pass = ?, name = ?, sex = ?, phonenumber = ?, category = ?, email = ? WHERE id = ?";
+
+        try  {
+        	psmt = con.prepareStatement(query);
+        	
+            psmt.setString(1, member.getPass());
+            psmt.setString(2, member.getName());
+            psmt.setString(3, member.getSex());
+            psmt.setString(4, member.getPhonenumber());
+            psmt.setString(5, member.getCategory());
+            psmt.setString(6, member.getEmail());
+            psmt.setString(7, member.getId()); // WHERE 절에 ID 사용
+
+            result = psmt.executeUpdate();
+        } catch (Exception e) {
             e.printStackTrace(); // 실제 서비스에서는 로깅 시스템 사용
         }
         return result;
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
       
 }
