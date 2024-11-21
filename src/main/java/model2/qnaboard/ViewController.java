@@ -1,0 +1,32 @@
+package model2.qnaboard;
+
+import java.io.IOException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/mvcboard/view.do")
+public class ViewController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//		게시물 불러오기
+		QNABoardDAO dao = new QNABoardDAO();
+		String idx = req.getParameter("idx");
+		dao.updateVisitCount(idx);  //조회수 1 증가
+		QNABoardDTO dto = dao.selectView(idx);
+		dao.close();
+		
+//		줄바꿈 처리
+		dto.setContent(dto.getContent().replace("\r\n", "<br/>"));
+		
+//		게시물(dto) 저장 후 뷰로 포워드
+		req.setAttribute("dto", dto);
+		req.getRequestDispatcher("/board/View.jsp").forward(req, resp);
+	}
+
+}

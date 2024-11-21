@@ -24,6 +24,20 @@
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script type="text/javascript">
+    function validateForm(form) {  // 필수 항목 입력 확인
+        if (form.title.value == "") {
+            alert("제목을 입력하세요.");
+            form.title.focus();
+            return false;
+        }
+        if (form.content.value == "") {
+            alert("내용을 입력하세요.");
+            form.content.focus();
+            return false;
+        }
+    }
+</script>
 </head>
 
 <body>
@@ -184,15 +198,17 @@
                             </div>
                         </div>
                         <div class="blog__details__comment">
-                            <h4>Leave a comment</h4>
-                            <form action="#">
+                            <h4>Comment</h4>
+                            <form name="writeCmt" method="post" 
+                            enctype="application/x-www-form-urlencoded" 
+                            action="../qnaboard/write.do" 
+                            onsubmit="return validateForm(this);">
                                 <div class="input__list">
-                                    <input type="text" placeholder="Name">
-                                    <input type="text" placeholder="Email">
-                                    <input type="text" placeholder="Website">
+                                    <input type="text" name="user_id" placeholder="아이디">
+                                    <input type="password" name="user_pw" placeholder="비밀번호">
                                 </div>
-                                <textarea placeholder="Comment"></textarea>
-                                <button type="submit" class="site-btn">Send Message</button>
+                                <textarea name="user_com" placeholder="내용입력"></textarea>
+                                <button type="submit" class="site-btn">Send Comment</button>
                             </form>
                         </div>
                     </div>

@@ -55,7 +55,7 @@
                                     <ul class="dropdown">
                                 		<li><a href="./mvcboard/listPage.do">자유게시판</a></li>
                                 		<li><a href="./mvcboard/listPage.do">질문게시판</a></li>
-                                		<li><a href="./mvcboard/listPage.do">자료실게시판</a></li>
+                                		<li><a href="./databoard/dataListPage.do">자료실게시판</a></li>
                                         <li><a href="./blog.jsp">Blog</a></li>
                                         <li><a href="./blog-details.jsp">Blog Details</a></li>
                                     </ul>
