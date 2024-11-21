@@ -50,12 +50,12 @@
                                 <li class="active"><a href="./index.jsp">Home</a></li>
                                 <li><a href="./about.jsp">About</a></li>
                                 <li><a href="./portfolio.jsp">Portfolio</a></li>
-                                <li><a href="./mvcboard/list.do">게시물</a></li>
                                 <li><a href="./services.jsp">작성하기</a></li>
-                                <li><a href="#">Pages</a>
+                                <li><a href="#">게시판</a>
                                     <ul class="dropdown">
-                                        <li><a href="./about.jsp">About</a></li>
-                                        <li><a href="./portfolio.jsp">Portfolio</a></li>
+                                		<li><a href="./mvcboard/listPage.do">자유게시판</a></li>
+                                		<li><a href="./mvcboard/listPage.do">질문게시판</a></li>
+                                		<li><a href="./mvcboard/listPage.do">자료실게시판</a></li>
                                         <li><a href="./blog.jsp">Blog</a></li>
                                         <li><a href="./blog-details.jsp">Blog Details</a></li>
                                     </ul>

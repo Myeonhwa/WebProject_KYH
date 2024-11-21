@@ -33,7 +33,7 @@ public class DeleteController extends HttpServlet{
 		작성자 본인 확인: DTO에 저장된 아이디와 session영역에 저장된 아이디를 비교하여
 		본인이 아니라면 경고창을 띄운다.
 		 */
-		if(!dto.getId().equals(session.getAttribute("userId").toString())) {
+		if(!dto.getId().equals(session.getAttribute("UserId").toString())) {
 			JSFunction.alertBack(resp, "작성자 본인만 삭제할 수 있습니다.");
 			return;
 		}

@@ -49,7 +49,7 @@
     </tr>
     <tr>
         <td colspan="2" align="center">
-            <button type="submit">작성 완료</button>
+            <button type="submit">수정 완료</button>
             <button type="reset">RESET</button>
             <button type="button" onclick="location.href='../mvcboard/list.do';">
                 목록 바로가기

@@ -74,7 +74,7 @@ public class ListPageController extends HttpServlet{
 //		전달할 데이터를 request 영역에 저장 후 View로 포워드
 		req.setAttribute("boardLists", boardLists);
 		req.setAttribute("map", map);
-		req.getRequestDispatcher("/14MVCBoard/ListPage.jsp").forward(req, resp);
+		req.getRequestDispatcher("/board/ListPage.jsp").forward(req, resp);
 	}
 }
 

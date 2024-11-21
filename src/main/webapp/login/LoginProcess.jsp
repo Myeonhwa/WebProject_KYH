@@ -16,9 +16,8 @@
 	MemberDAO dao = new MemberDAO(oracleDriver, oracleURL, oracleId, oraclePwd);
 	MemberDTO memberDTO = dao.getMemberDTO(userId, userPwd);
 	
-	dao.close();
 	
-	if (memberDTO.getId() != null) {
+	if (memberDTO != null && memberDTO.getId() != null) {
 		
 		session.setAttribute("UserId", memberDTO.getId());
 		session.setAttribute("UserName", memberDTO.getName());
@@ -30,6 +29,7 @@
 		request.setAttribute("LoginErrMsg", "로그인 실패");
 		request.getRequestDispatcher("Login.jsp").forward(request, response);
 	}
+	dao.close();
 %>    
     
     
