@@ -35,13 +35,14 @@
 		</tr>
 		<tr>
 			<td>내용</td>
-			<td colspan="3" height="100">${ mimeType }</td>
+			<td colspan="3" height="100">${ dto.content }</td>
 		</tr>
 		<tr>
+		<!-- mimeType이 안넘어오는거 같음 -->
 			<td>파일</td>
 			<td colspan="3" height="100">
 			 <c:if test="${ not empty dto.ofile }">
-				
+				<br />
 				<c:choose>
 					<c:when test="${ mimeType eq 'img' }">
 						<img src="../Uploads/${ dto.sfile }" style="max-width: 600px;" />
@@ -73,7 +74,7 @@
 		<tr>
 			<td colspan="4" align="center">
 				<button type="button"
-					onclick="location.href='../databoard/edit.do?idx=${ param.idx }';">
+					onclick="location.href='../databoard/editData.do?idx=${ param.idx }';">
 					수정하기</button>
 				<button type="button"
 					onclick="location.href='../databoard/deleteData.do?idx=${ param.idx }';">

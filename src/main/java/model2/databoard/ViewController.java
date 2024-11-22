@@ -24,11 +24,6 @@ public class ViewController extends HttpServlet {
 //		줄바꿈 처리
 		dto.setContent(dto.getContent().replace("\r\n", "<br/>"));
 		
-//		게시물(dto) 저장 후 뷰로 포워드
-		req.setAttribute("dto", dto);
-		req.getRequestDispatcher("/board/DataView.jsp").forward(req, resp);
-
-		
 //		첨부파일 확장자 추출 및 이미지 타입 확인
 		String ext = null;
 		String fileName = dto.getSfile();
@@ -38,10 +33,6 @@ public class ViewController extends HttpServlet {
 		if(fileName!=null) {
 			ext = fileName.substring(fileName.lastIndexOf(".")+1);
 			System.out.println("첨부파일이 있습니다.");
-		} else {
-		    System.out.println("첨부파일이 없습니다.");
-		    req.setAttribute("mimeType", null);
-		    return;
 		}
 		
 		String[] extArray1 = {"png","jpg","gif","pcx","bmp"};
@@ -59,6 +50,13 @@ public class ViewController extends HttpServlet {
 		}
 		System.out.println("MIME타입="+mimeType);
 		req.setAttribute("mimeType", mimeType);
+		
+//		게시물(dto) 저장 후 뷰로 포워드
+		req.setAttribute("dto", dto);
+		req.getRequestDispatcher("/board/DataView.jsp").forward(req, resp);
+
+		
+
 	}
 	
 	public boolean mimeContains(String[] strArr, String ext) {

@@ -1,4 +1,4 @@
-package model2.databoard;
+package model2.commentboard;
 
 import java.io.IOException;
 
@@ -12,8 +12,8 @@ import jakarta.servlet.http.HttpSession;
 import utils.JSFunction;
 
 //게시물 삭제 처리
-@WebServlet("/databoard/deleteData.do")
-public class DeleteController extends HttpServlet{
+@WebServlet("/commentboard/commentdelete.do")
+public class CommentDeleteController extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	
 	@Override
@@ -27,8 +27,8 @@ public class DeleteController extends HttpServlet{
 		}
 //		게시물 얻어오기: 열람에서 사용한 메서드를 그대로 사용한다.
 		String idx = req.getParameter("idx");
-		DATABoardDAO dao = new DATABoardDAO();
-		DATABoardDTO dto = dao.selectView(idx);
+		COMMENTBoardDAO dao = new COMMENTBoardDAO();
+		COMMENTBoardDTO dto = dao.selectView(idx);
 		/*
 		작성자 본인 확인: DTO에 저장된 아이디와 session영역에 저장된 아이디를 비교하여
 		본인이 아니라면 경고창을 띄운다.
@@ -46,7 +46,7 @@ public class DeleteController extends HttpServlet{
 			FileUtil.deleteFile(req, "/Uploads", saveFileName);
 		}
 //		삭제가 완료되면 목록으로 이동한다.
-		JSFunction.alertLocation(resp, "삭제되었습니다.", "../mvcboard/list.do");
+		JSFunction.alertLocation(resp, "삭제되었습니다.", "../qnaboard/qnaListPage.do");
 	}
 }
 

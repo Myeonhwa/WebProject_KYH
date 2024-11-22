@@ -49,13 +49,13 @@ a {
 					<tr align="center">
 						<td>${ map.totalCount -(((map.pageNum-1) * map.pageSize) + loop.index) }</td>
 						<td align="left"><a
-							href="../databoard/dataview.do?idx=${ row.idx }"> ${ row.title }</a></td>
+							href="../qnaboard/qnaview.do?idx=${ row.idx }"> ${ row.title }</a></td>
 						<td>${ row.id }</td>
 						<td>${ row.visitcount }</td>
 						<td>${ row.postdate }</td>
 						<td><c:if test="${ not empty row.ofile }">
 								<a
-									href="../databoard/datadownload.do?ofile=${ row.ofile }&sfile=${ row.sfile }&idx=${ row.idx }">[Down]</a>
+									href="../qnaboard/qnadownload.do?ofile=${ row.ofile }&sfile=${ row.sfile }&idx=${ row.idx }">[Down]</a>
 							</c:if></td>
 					</tr>
 				</c:forEach>
@@ -68,7 +68,7 @@ a {
 					${ map.pagingImg }
 				</td>
 				<td width="100"><button type="button"
-						onclick="location.href='../databoard/datawrite.do';">글쓰기</button></td>
+						onclick="location.href='../qnaboard/qnawrite.do';">글쓰기</button></td>
 			</tr>
 		</table>
 </body>

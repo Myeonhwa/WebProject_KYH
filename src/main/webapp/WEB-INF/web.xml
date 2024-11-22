@@ -90,13 +90,13 @@
 	</servlet-mapping>
 	
 	
-	<!-- DataBoard -->
+	<!-- Q&ABoard -->
 	<servlet>
 		<servlet-name>QnaBoardListPage</servlet-name>
 		<servlet-class>model2.qnaboard.ListPageController</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>DataBoardListPage</servlet-name>
+		<servlet-name>QnaBoardListPage</servlet-name>
 		<url-pattern>/qnaboard/qnaListPage.do</url-pattern>
 	</servlet-mapping>
 	<servlet>
@@ -110,6 +110,25 @@
 	<servlet-mapping>
 		<servlet-name>QnaBoardWrite</servlet-name>
 		<url-pattern>/qnaboard/qnawrite.do</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- Q&ABoard Comment -->
+	<servlet>
+		<servlet-name>CommentBoardListPage</servlet-name>
+		<servlet-class>model2.commentboard.CommentPageController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CommentBoardListPage</servlet-name>
+		<url-pattern>/commentboard/commentListPage.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>CommentBoardWrite</servlet-name>
+		<servlet-class>model2.commentboard.WriteController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CommentBoardWrite</servlet-name>
+		<url-pattern>/commentboard/commentwrite.do</url-pattern>
 	</servlet-mapping>
 	
 	
