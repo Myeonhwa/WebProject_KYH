@@ -90,6 +90,29 @@
 	</servlet-mapping>
 	
 	
+	<!-- DataBoard -->
+	<servlet>
+		<servlet-name>QnaBoardListPage</servlet-name>
+		<servlet-class>model2.qnaboard.ListPageController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DataBoardListPage</servlet-name>
+		<url-pattern>/qnaboard/qnaListPage.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>QnaBoardWrite</servlet-name>
+		<servlet-class>model2.qnaboard.WriteController</servlet-class>
+		<multipart-config>
+			<max-file-size>10485760</max-file-size> <!-- 10MB -->
+			<max-request-size>104857600</max-request-size> <!-- 100MB -->
+		</multipart-config>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QnaBoardWrite</servlet-name>
+		<url-pattern>/qnaboard/qnawrite.do</url-pattern>
+	</servlet-mapping>
+	
+	
 	<!-- 게시판 페이징 처리를 위한 설정값 -->
 	<!-- 한 페이지당 출력할 게시물의 갯수 -->
 	<context-param>

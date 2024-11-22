@@ -44,7 +44,7 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 			originalFileName = FileUtil.uploadFile(req, saveDirectory);
 		}
 		catch (Exception e) {
-			JSFunction.alertLocation(resp, "파일 업로드 오류입니다.", "../mvcboard/write.do");
+			JSFunction.alertLocation(resp, "파일 업로드 오류입니다.", "../qnaboard/write.do");
 			return;
 		}
 	
@@ -71,20 +71,20 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 	
 	/*********************************************/
 //	더미데이터 100개 입력하기
-	for(int i=1;  i<=100 ; i++) {
-		dto.setTitle(req.getParameter("title")+"-"+i);
-		dao.insertWrite(dto);
-	}
+//	for(int i=1;  i<=100 ; i++) {
+//		dto.setTitle(req.getParameter("title")+"-"+i);
+//		dao.insertWrite(dto);
+//	}
 	/*********************************************/
 	
 	dao.close();
 	
 //	성공 or 실패?
 	if (result ==1) {
-		resp.sendRedirect("../mvcboard/listPage.do");
+		resp.sendRedirect("../qnaboard/qnaListPage.do");
 	}
 	else { // 글쓰기 실패
-		JSFunction.alertLocation(resp, "글쓰기에 실패했습니다.", "../mvcboard/write.do");
+		JSFunction.alertLocation(resp, "글쓰기에 실패했습니다.", "../qnaboard/qnawrite.do");
 	}
 }
 }	

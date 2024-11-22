@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import utils.JSFunction;
 
-@WebServlet("/mvcboard/edit.do")
+@WebServlet("/qnaboard/qnaedit.do")
 @MultipartConfig(
 		maxFileSize = 1024 * 1024 * 1,
 		maxRequestSize = 1024 * 1024 * 10
@@ -40,7 +40,7 @@ public class EditController extends HttpServlet {
 			return;
 		}		
 		req.setAttribute("dto", dto);
-		req.getRequestDispatcher("/board/Edit.jsp").forward(req, resp);
+		req.getRequestDispatcher("/board/QnaEdit.jsp").forward(req, resp);
 	}
 
 	@Override
@@ -52,15 +52,15 @@ public class EditController extends HttpServlet {
 			return;
 		}
 		
-		System.out.println("세션="+session.getAttribute("UserId"));
+//		System.out.println("세션="+session.getAttribute("UserId"));
 		
 //		작성자 본인 확인
 		
 		
-//		if(!req.getParameter("id").equals(session.getAttribute("UserId").toString())) {
-//			JSFunction.alertBack(resp, "작성자 본인만 수정할 수 있습니다.");
-//			return;
-//		}
+		if(!req.getParameter("id").equals(session.getAttribute("UserId").toString())) {
+			JSFunction.alertBack(resp, "작성자 본인만 수정할 수 있습니다.");
+			return;
+		}
 
 //		1.파일 업로드 처리==================================================
 //		업로드 디렉토리의 물리적 경로 확인
@@ -115,10 +115,10 @@ public class EditController extends HttpServlet {
 		
 //		성공 or 실패
 		if (result == 1) {	// 수정 성공
-			resp.sendRedirect("../mvcboard/view.do?idx="+idx);
+			resp.sendRedirect("../qnaboard/qnaview.do?idx="+idx);
 		}
 		else {	// 수정 실패
-			JSFunction.alertLocation(resp, "수정에 실패했습니다..", "../mvcboard/view.do?idx="+idx);
+			JSFunction.alertLocation(resp, "수정에 실패했습니다..", "../qnaboard/qnaedit.do?idx="+idx);
 			}
 		}
 	

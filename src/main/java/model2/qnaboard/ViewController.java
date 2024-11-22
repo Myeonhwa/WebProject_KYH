@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/mvcboard/view.do")
+@WebServlet("/qnaboard/qnaview.do")
 public class ViewController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -26,7 +26,7 @@ public class ViewController extends HttpServlet {
 		
 //		게시물(dto) 저장 후 뷰로 포워드
 		req.setAttribute("dto", dto);
-		req.getRequestDispatcher("/board/View.jsp").forward(req, resp);
+		req.getRequestDispatcher("/board/QnaView.jsp").forward(req, resp);
 	}
 
 }

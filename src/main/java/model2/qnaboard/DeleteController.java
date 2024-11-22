@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpSession;
 import utils.JSFunction;
 
 //게시물 삭제 처리
-@WebServlet("/mvcboard/delete.do")
+@WebServlet("/qnaboard/qnadelete.do")
 public class DeleteController extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	
@@ -46,7 +46,7 @@ public class DeleteController extends HttpServlet{
 			FileUtil.deleteFile(req, "/Uploads", saveFileName);
 		}
 //		삭제가 완료되면 목록으로 이동한다.
-		JSFunction.alertLocation(resp, "삭제되었습니다.", "../mvcboard/list.do");
+		JSFunction.alertLocation(resp, "삭제되었습니다.", "../qnaboard/qnaListPage.do");
 	}
 }
 

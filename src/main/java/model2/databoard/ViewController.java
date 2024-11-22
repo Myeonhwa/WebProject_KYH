@@ -32,10 +32,16 @@ public class ViewController extends HttpServlet {
 //		첨부파일 확장자 추출 및 이미지 타입 확인
 		String ext = null;
 		String fileName = dto.getSfile();
+		System.out.println("파일 경로: " + fileName);
 		String mimeType = null;
 		
 		if(fileName!=null) {
 			ext = fileName.substring(fileName.lastIndexOf(".")+1);
+			System.out.println("첨부파일이 있습니다.");
+		} else {
+		    System.out.println("첨부파일이 없습니다.");
+		    req.setAttribute("mimeType", null);
+		    return;
 		}
 		
 		String[] extArray1 = {"png","jpg","gif","pcx","bmp"};
